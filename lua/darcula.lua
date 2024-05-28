@@ -34,6 +34,15 @@ M.colors = function()
 end
 
 local color = require("palette")
+
+M.set_colors = function(colors)
+  if type(colors) == "table" then
+    for key, value in pairs(colors) do
+      color[key] = value
+    end
+  end
+end
+
 M.configure_highlights = function()
   -- colors
   -- Highlight groups

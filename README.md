@@ -10,7 +10,7 @@ comparing with the original Darcula theme in GoLand:
 
 ## Default Colors
 
-```json
+```lua
 {
   green = "#98be65",
   red = "#f43753",

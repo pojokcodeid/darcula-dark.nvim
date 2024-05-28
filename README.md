@@ -15,21 +15,21 @@ To install this color scheme, add the following to your plugin configuration:
 lazy.nvim
 
 ```lua
-{
-  "pojokcodeid/darcula-dark.nvim",
-  priority = 1000,
-  lazy = false,
-  config = function()
-    vim.api.nvim_create_autocmd("ColorScheme", {
-      pattern = "*",
-      callback = function()
-        -- vim.api.nvim_set_hl(0, "TSKeywordFunction", { fg = color.burnt_orange, italic = true })
-        -- vim.api.nvim_set_hl(0, "@keyword", { fg = color.burnt_orange, italic = true })
-      end,
-    })
-    vim.cmd.colorscheme "darcula-dark"
-  end,
-}
+  {
+    "pojokcodeid/darcula-dark.nvim",
+    priority = 1000,
+    lazy = false,
+    config = function()
+      vim.api.nvim_create_autocmd("ColorScheme", {
+        pattern = "*",
+        callback = function()
+          local colors = require("darcula").colors()
+          local hi = vim.api.nvim_set_hl
+          hi(0, "@property.json", { fg = colors.lavender })
+        end,
+      })
+    end,
+  },
 ```
 
 packer.nvim

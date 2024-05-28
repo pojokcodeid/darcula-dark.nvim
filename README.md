@@ -36,7 +36,7 @@ packer.nvim
 
 ```lua
   use {
-    'xiantang/darcula-dark.nvim',
+    'pojokcodeid/darcula-dark.nvim',
     requires = {"nvim-treesitter/nvim-treesitter"}
   }
 

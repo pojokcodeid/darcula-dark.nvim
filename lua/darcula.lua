@@ -672,6 +672,7 @@ M.configure_highlights = function()
   hi(0, "@tag.delimiter.javascript", { fg = color._58 })
   hi(0, "@tag.delimiter", { fg = color._58 })
   hi(0, "@variable.member.javascript", { fg = color.lavender })
+  hi(0, "@property.json", { fg = color.lavender })
   -- Terminal colors
   local g = vim.g
 

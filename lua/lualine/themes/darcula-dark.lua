@@ -1,0 +1,71 @@
+local color = {
+  green = "#98be65",
+  red = "#f43753",
+  grey = "#C9D0D3",
+  light_blue = "#b3deef",
+  background = "#383838",
+  pale_gold = "#d3b987",
+  dark = "#2B2B2B",
+  bright_sky = "#73cef4",
+  golden_yellow = "#ffc24b",
+  light_olive_green = "#c9d05c",
+  medium_gray = "#4c4c4c",
+  light_brown = "#dc9656",
+  silver_gray = "#b8b8b8",
+  bright_cyan = "#00f1f5",
+  light_slate_gray = "#abb2bf",
+  dark_grey = "#484848",
+  comment = "#808080",
+  light_lime_green = "#a9ff68",
+  peach_orange = "#ff9e64",
+  slate_gray = "#6d8086",
+  light_lavender = "#cba6f7",
+  very_light_gray = "#eeeeee",
+  dark_charcoal_gray = "#404040",
+  very_dark_gray = "#242424",
+  bright_pink = "#f70067",
+  burnt_orange = "#CC7832",
+  dark_maroon = "#7a1b29",
+  steel_blue = "#596f77",
+  bright_yellow_green = "#e3e346",
+  copper_brown = "#C07C41",
+  deep_fuchsia = "#b33076",
+  lavender = "#9876AA",
+  deep_light_blue = "#51afef",
+  pale_taupe = "#AD9E7D",
+  olive_green = "#6A8759",
+}
+
+return {
+  normal = {
+    a = { fg = color.silver_gray, bg = color.medium_gray },
+    b = { fg = color.silver_gray, bg = color.background },
+    c = { fg = color.light_slate_gray, bg = "NONE" },
+  },
+
+  insert = {
+    a = { fg = color.background, bg = color.green },
+    b = { fg = color.green, bg = color.background },
+  },
+  visual = {
+    a = { fg = color.background, bg = color.bright_cyan },
+    b = { fg = color.bright_cyan, bg = color.background },
+  },
+  replace = {
+    a = { fg = color.background, bg = color.red },
+    b = { fg = color.red, bg = color.background },
+  },
+  command = {
+    a = { fg = color.background, bg = color.burnt_orange },
+    b = { fg = color.burnt_orange, bg = color.background },
+  },
+  terminal = {
+    a = { fg = color.background, bg = color.burnt_orange },
+    b = { fg = color.burnt_orange, bg = color.background },
+  },
+  inactive = {
+    a = { fg = color.silver_gray, bg = "NONE" },
+    b = { fg = color.silver_gray, bg = "NONE" },
+    c = { fg = color.silver_gray, bg = "NONE" },
+  },
+}

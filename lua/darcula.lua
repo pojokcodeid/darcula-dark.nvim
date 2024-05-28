@@ -29,6 +29,10 @@ M.setup = function(args)
   M.configure_highlights()
 end
 
+M.colors = function()
+  return require("palette")
+end
+
 local color = require("palette")
 M.configure_highlights = function()
   -- colors

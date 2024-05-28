@@ -4,7 +4,7 @@ local config = {}
 
 ---@class MyModule
 local M = {}
-
+local user_configs = {}
 ---@type Config
 M.config = config
 
@@ -26,26 +26,25 @@ M.setup = function(args)
 
   vim.g.colors_name = "darcula-dark"
   vim.o.termguicolors = true
+  if type(args) == "table" then
+    user_configs = args
+  end
   M.configure_highlights()
-end
-
-M.colors = function()
-  return require("palette")
 end
 
 local color = require("palette")
 
-M.set_colors = function(colors)
-  if type(colors) == "table" then
-    for key, value in pairs(colors) do
-      color[key] = value
-    end
-  end
+M.colors = function()
+  return color
 end
 
 M.configure_highlights = function()
   -- colors
   -- Highlight groups
+  for key, value in pairs(user_configs.colors) do
+    color[key] = value
+  end
+
   local hi = vim.api.nvim_set_hl
 
   -- lsp semantics token

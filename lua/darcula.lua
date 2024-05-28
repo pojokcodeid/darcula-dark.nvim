@@ -32,19 +32,18 @@ M.setup = function(args)
   M.configure_highlights()
 end
 
-local color = require("palette")
-
+local color = {}
 M.colors = function()
-  return color
+  return require("palette")
 end
 
 M.configure_highlights = function()
   -- colors
   -- Highlight groups
   for key, value in pairs(user_configs.colors) do
-    color[key] = value
+    require("palette")[key] = value
   end
-
+  color = require("palette")
   local hi = vim.api.nvim_set_hl
 
   -- lsp semantics token

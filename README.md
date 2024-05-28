@@ -23,13 +23,21 @@ lazy.nvim
       vim.api.nvim_create_autocmd("ColorScheme", {
         pattern = "*",
         callback = function()
+          require("darcula").setup {
+            -- overide colors
+            colors = {
+              lavender = "#9876AA",
+            },
+          }
+          -- get colors
           local colors = require("darcula").colors()
+          -- set highlights
           local hi = vim.api.nvim_set_hl
           hi(0, "@property.json", { fg = colors.lavender })
         end,
       })
     end,
-  },
+  }
 ```
 
 packer.nvim

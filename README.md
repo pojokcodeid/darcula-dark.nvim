@@ -84,6 +84,7 @@ lazy.nvim
     lazy = false,
     config = function()
       require("darcula").setup {
+        -- overide default colors
         colors = {
           lavender = "#9876AA",
         },
@@ -91,7 +92,9 @@ lazy.nvim
       vim.api.nvim_create_autocmd("ColorScheme", {
         pattern = "*",
         callback = function()
+          -- get colors
           local colors = require("darcula").colors()
+          -- custom hilights
           local hi = vim.api.nvim_set_hl
           hi(0, "@property.json", { fg = colors.lavender })
         end,

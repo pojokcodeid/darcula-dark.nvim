@@ -629,7 +629,8 @@ M.configure_highlights = function()
   hi(0, "@lsp.type.property", { fg = color.lavender })
   hi(0, "NoiceCmdlinePopupBorder", { fg = color.medium_gray })
   hi(0, "NoiceCmdlinePopupBorderSearch", { fg = color.pale_taupe })
-
+  hi(0, "@number.float", { fg = color._68 })
+  hi(0, "@constant.html", { fg = color.golden_yellow })
   -- Terminal colors
   local g = vim.g
 

@@ -631,6 +631,7 @@ M.configure_highlights = function()
   hi(0, "NoiceCmdlinePopupBorderSearch", { fg = color.pale_taupe })
   hi(0, "@number.float", { fg = color._68 })
   hi(0, "@constant.html", { fg = color.golden_yellow })
+  hi(0, "@constant", { fg = color.light_brown })
   -- Terminal colors
   local g = vim.g
 

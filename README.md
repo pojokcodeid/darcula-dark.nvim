@@ -68,6 +68,7 @@ comparing with the original Darcula theme in GoLand:
   _72 = "#4682b4",
   _75 = "#392a52",
   _82 = "#151838",
+  statusline = "NONE",
 }
 ```
 

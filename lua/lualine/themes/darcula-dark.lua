@@ -3,7 +3,7 @@ return {
   normal = {
     a = { fg = color.silver_gray, bg = color.medium_gray },
     b = { fg = color.silver_gray, bg = color.background },
-    c = { fg = color.light_slate_gray, bg = "NONE" },
+    c = { fg = color.light_slate_gray, bg = color.statusline },
   },
 
   insert = {
